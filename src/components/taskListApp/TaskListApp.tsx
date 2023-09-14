@@ -1,9 +1,10 @@
+import React from "react";
 import { TaskSearch } from "./TaskSearch";
 import { TaskList } from "./TaskList";
 import { TaskItem } from "./TaskItem";
 import { TaskCounter } from "./TaskCounter";
+import { CreateTaskButton } from './CreateTaskButton';
 import '../../assets/styles/global.scss'
-import React from "react";
 
 export interface BaseTask{
     id: number,
@@ -29,7 +30,9 @@ const TaskListApp = () : JSX.Element => {
                         return (<TaskItem key={t.id} text={t.text} completed={t.completed} />);
                     })
                 }
-            </TaskList>            
+            </TaskList>    
+
+            <CreateTaskButton />        
         </>
     );
 };
